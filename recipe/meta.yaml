@@ -1,18 +1,18 @@
 {% set name = "cobra-component-models" %}
-{% set version = "0.3.2" %}
+{% set version = "0.4.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: c35f445aec2882475fcf7b933717ba61fdb1757052ed3a1a73d6bbd2d12db518
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 491a050c7e4b766652ea5c5505ff5bdca289a34b101181cd5ce36b05cbddbeb8
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv --no-deps --ignore-installed"
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --ignore-installed
 
 requirements:
   host:
@@ -35,7 +35,7 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
-  summary: "SQLAlchemy ORM and pydantic data models for SQL storage and JSON serialization of COBRA components such as reactions, compounds, and compartments."
+  summary: SQLAlchemy ORM and pydantic data models for SQL storage and JSON serialization of COBRA components such as reactions, compounds, and compartments.
   description: |
     Provide SQLAlchemy ORM and pydantic data models for SQL storage and
     serialization of COBRA components such as reactions, compounds, and
