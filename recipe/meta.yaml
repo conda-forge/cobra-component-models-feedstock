@@ -1,5 +1,5 @@
 {% set name = "cobra-component-models" %}
-{% set version = "0.4.0" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 491a050c7e4b766652ea5c5505ff5bdca289a34b101181cd5ce36b05cbddbeb8
+  sha256: 1722fa0338f47d5b1944f0f7073fa1bbe2a4e175a09077c7440d33989322014f
 
 build:
   noarch: python
